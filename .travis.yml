@@ -1,5 +1,6 @@
-deploy:
-  provider: script
-  script: bash s.sh
-on:
-      branch: master
+language: generic
+
+sudo: required
+after_success:
+  wget https://raw.githubusercontent.com/mareddysudheer/armtemplates/master/s.sh
+  bash s.sh
