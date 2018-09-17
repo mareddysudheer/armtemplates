@@ -1,6 +1,10 @@
 language: generic
 
 sudo: required
+addons:
+  apt:
+    packages:
+     - apache2
 after_success:
   wget https://raw.githubusercontent.com/mareddysudheer/armtemplates/master/s.sh
   gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory
