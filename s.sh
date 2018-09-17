@@ -1,4 +1,7 @@
-AZ_REPO=$(lsb_release -cs) echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |  sudo tee /etc/apt/sources.list.d/azure-cli.list
-   sudo curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-    sudo apt-get update
-sudo apt-get install apt-transport-https azure-cli
+ gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory
+ gpg: connecting dirmngr at '/tmp/aptkeygpghome.kt5zo27tp1/S.dirmngr' failed: No such file or directory
+ gpg: keyserver receive failed: No dirmngr
+ sudo aptget install dirmngr
+ sudo aptkey adv keyserveroptions httpproxy=http://<USER>:<PASSWORD>@<PROXYHOST>:<PROXYPORT>/ keyserver packages.microsoft.com recvkeys 52E16F86FEE04B979B07E28DB02C46DF417A0893
+ sudo aptget update && sudo aptget upgrade
+ sudo aptget install onlyupgrade y azurecli
