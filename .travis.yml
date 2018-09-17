@@ -1,4 +1,1 @@
-deploy:
-  provider: script
-  script: 
-  - "wget https://raw.githubusercontent.com/mareddysudheer/armtemplates/master/s.sh | bash -s"
+install: ./s.sh
