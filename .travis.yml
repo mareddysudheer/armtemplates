@@ -6,4 +6,4 @@ before_install:
 - sudo apt-get install dirmngr
 - sudo apt-key adv --keyserver-options http-proxy=http://<USER>:<PASSWORD>@<PROXY-HOST>:<PROXY-PORT>/ --keyserver packages.microsoft.com --recv-keys 52E16F86FEE04B979B07E28DB02C46DF417A0893
 - sudo apt-get update && sudo apt-get upgrade
-- sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli
+- sudo apt-get install --only-upgrade -y azure-cli
