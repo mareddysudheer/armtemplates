@@ -1,9 +1,3 @@
-
-before_install:
-- gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory
-- gpg: connecting dirmngr at '/tmp/apt-key-gpghome.kt5zo27tp1/S.dirmngr' failed: No such file or directory
-- gpg: keyserver receive failed: No dirmngr
-- sudo apt-get install dirmngr
-- sudo apt-key adv --keyserver-options http-proxy=http://<USER>:<PASSWORD>@<PROXY-HOST>:<PROXY-PORT>/ --keyserver packages.microsoft.com --recv-keys 52E16F86FEE04B979B07E28DB02C46DF417A0893
-- sudo apt-get update && sudo apt-get upgrade
-- sudo apt-get install --only-upgrade -y azure-cli
+deploy:
+  provider: script
+  script: bash s.sh
