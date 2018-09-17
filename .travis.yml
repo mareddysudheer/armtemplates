@@ -1,3 +1,5 @@
 deploy:
   provider: script
   script: bash s.sh
+on:
+      branch: master
