@@ -4,5 +4,5 @@ sudo: required
 
 after_success:
   sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli
-  az login -u sudheerm@sysgain.com -p raghavaMM@123
+  az login -u sudheer@onmicrosoft.com -p TestVM@123
   az group create --name TestRG1 --location "East US"
